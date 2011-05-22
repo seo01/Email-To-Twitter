@@ -1,3 +1,25 @@
 PHP Email to Twitter
 
 === Intro ===
+This is a simple PHP application that runs on your home PC and publishes all e-mails sent to a given e-mail address to a twitter account.
+
+=== The Future ===
+It would be very cool if someone could turn this into a web service.
+
+=== Mac OS X -- mac ports ===
+The easiest way to get the Imap library to work under OS X requires Mac Ports:
+Install from here:
+http://www.macports.org/install.php
+
+Sync
+>sudo port selfupdate
+
+Install the required libraries (may take sometime):
+>sudo port install php5-imap
+>sudo port install php5-curl
+
+=== Config ===
+All configuration is done with the /src/config.php file.
+
+=== Cron ===
+To constantly copy e-mails from your e-mail account to your twitter account you need to add a line to your crontab. Explained below:

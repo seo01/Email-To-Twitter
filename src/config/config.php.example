@@ -1,0 +1,29 @@
+<?php
+
+#imap
+$imapServer = "{imap.googlemail.com:993/imap/ssl/novalidate-cert}INBOX";
+$imapUser = "example@example.com";
+$imapPsswd = "OpenSesame";
+
+#count file
+$countFile = 'currentmsg.txt';
+
+#bitly
+$bitlyUser = "ExampleUser";
+$bitlyKey = "XXX";
+
+#link extraction
+$linkExclusionList = Array("http://flipboard.com");
+
+#author extraction
+$knownAddresses = Array("example@example.com"=>"@exampleTwitter","ben@example.com"=>"@exampleBen",...);
+$knownDomains = Array("example.com");
+
+#log tweets
+$tweetFileName = "tweets.txt";
+
+#Twitter details
+$consumerKey    = 'XXX';
+$consumerSecret = 'XXX';
+$oAuthToken     = 'XXX';
+$oAuthSecret    = 'XXX';

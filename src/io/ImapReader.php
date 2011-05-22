@@ -42,6 +42,6 @@ class ImapReader implements iEmailReader
 	
 	public function getBody($index)
 	{
-		return imap_body($this->mailbox, $index);
+		return imap_qprint(imap_body($this->mailbox, $index));
 	}
 }
