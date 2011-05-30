@@ -19,7 +19,21 @@ Install the required libraries (may take sometime):
 >sudo port install php5-curl
 
 === Config ===
-All configuration is done with the /src/config.php file.
+All configuration is done with the /src/config.php file. All the config variables are documented in the example config.
+
+=== Modules ===
+Email to twitter is highly modula. All the modules are setup in the main src/EmailToTwitter.php files. This is the place to swap out or replace modules.
+
+=== Run ===
+You can run EmailToTwitter from the command line:
+>php src/EmailToTwitter.php
+
+=== Testing ===
+Testing requires installing phpunit. Once this is installed you can simply run
+>phpunit src
 
 === Cron ===
 To constantly copy e-mails from your e-mail account to your twitter account you need to add a line to your crontab. Explained below:
+If your using mac ports you will need to specify the appropritate PHP version
+Add the following line to your cron tab (>crontab -e)
+* * * * * /opt/local/bin/php /Users/simon/Documents/git/email2twitter/src/EmailToTwitter.php

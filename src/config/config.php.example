@@ -1,28 +1,37 @@
 <?php
 
 #imap
+#These are the settings for your IMAP server as required by IMAP PHP
 $imapServer = "{imap.googlemail.com:993/imap/ssl/novalidate-cert}INBOX";
 $imapUser = "example@example.com";
 $imapPsswd = "OpenSesame";
 
 #count file
+#This is the file where Email2Twitter stores its state, the index of the last message published.
 $countFile = 'currentmsg.txt';
 
 #bitly
+#Your bitly acount details for URL shortenting
 $bitlyUser = "ExampleUser";
 $bitlyKey = "XXX";
 
 #link extraction
+#A list of links to exclude if they appear in e-mails, this should include links that appear in boiler plates or signitures
 $linkExclusionList = Array("http://flipboard.com");
 
 #author extraction
+#a mapping of email addresses to twitter acounts of people you expect to recieve e-mail from
 $knownAddresses = Array("example@example.com"=>"@exampleTwitter","ben@example.com"=>"@exampleBen",...);
+#A list of domains which if you recieve e-mail from you want the domain cut from the e-mail address e.g. john@example.com become john@
+#If you use this for a work e-mail typically this will be the company url
 $knownDomains = Array("example.com");
 
 #log tweets
+#a log of all the tweets sent
 $tweetFileName = "tweets.txt";
 
 #Twitter details
+#You will need to register an app with twitter and copy all the details bellow
 $consumerKey    = 'XXX';
 $consumerSecret = 'XXX';
 $oAuthToken     = 'XXX';
