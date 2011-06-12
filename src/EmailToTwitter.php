@@ -27,7 +27,7 @@ $tweetBuilder = new UrlListDocumentTweetBuilder();
 #core loop
 $current = $countDao->getCount();
 $max = $emailReader->getCount();
-for($current++; $current <= $max; $current++)
+for(; $current <= $max; $current++)
 {
 	$subject = $emailReader->getSubject($current);
 	$links = $urlShortener->shortenAll

@@ -37,7 +37,8 @@ class ImapReader implements iEmailReader
 	public function getSubject($index)
 	{
 		$headers = imap_headerinfo($this->mailbox, $index);
-		return $headers->subject;
+		//probably should imap_qprint the subject!
+		return imap_qprint($headers->subject);
 	}
 	
 	public function getBody($index)
